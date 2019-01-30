@@ -7,4 +7,12 @@ cache:
 
 script:
   - mvn test
+  
+notifications:
+  email:
+    - cph-cj331@cphbusiness.dk
+    
+after_success:
+
+  - mvn tomcat7:deploy -Premote 
 
